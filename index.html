@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+		<title>Tech snap</title>
+		<link href="Learners.css" rel="stylesheet" />
+
 	<style type="text/css">
 	
 	*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Mulish', sans-serif; }
@@ -28,6 +33,30 @@
 </head>
 
 <body>	
+	<section
+			class="header">
+			<img id='logo' src="./assets/logo.jpg" alt="logo">
+			<div class="navItems">
+				<a href="##">About Us</a>
+				<a href="##">Our People</a>
+				<a href="##">Learn</a>
+				<button class="btn">Get Started</button>
+			</div>
+			<div class="Ham">
+				<img src="./assets/menu.png" alt="Ham" >
+			</div>
+		</section>
+		<!-- mobile menu --------------------------------------------- -->
+<div class="dropMenu">
+	<ul>
+		<li><a href="##">About Us</a></li>
+		<li><a href="##">Our People</a></li>
+		<li><a href="##">Learn</a></li>
+		<button class="btn">Get Started</button>
+		
+	</ul>
+	<div class="Close">X</div>
+</div>
 <div class="grandparent">
 	<div class="parent1"> </div>
 	<div class="parent2">
@@ -54,6 +83,96 @@
 
 	</div>
 </div> <br>
+<div class="parent3">
+		<footer class="Footer_conatiner">
+	<div class="Footer_header">
+		<img src="./assets/logo.jpg" alt="Logo" >
+		<br><br>
+		<p>We are here to solve your problems beacuse while pursuing your UG-CSE you might have lot many doubts about trending jobs and skills required to get hired for that job, WE HELP YOU TO KNOW ABOT TRENDING JOBS AND REQUIRED SKILLS</p>
+		<br>
+		<p>As well we help you to submit your projects in your degree pursuing university and we help you by free tutorials in Data science,AI, ML</p>
+	</div>
+	<div class="Footer_columns_holder">
+		<div class="Footer_columns">
+			<h1>Company</h1>
+			<a href="##">About us</a>
+			<a href="##">Learner stories</a>
+			<a href="##">our people</a>
+			<a href="##">jobs</a>
+		</div>
+		<div class="Footer_columns">
+			<h1>Resources</h1>
+			<a href="##">Learn</a>
+			<a href="##">Carrer path</a>
+			<a href="##">Internship</a>
+			<a href="##">Blogs</a>
+		</div>
+		<div class="Footer_columns">
+			<h1>Support</h1>
+			<a href="##">Contact us</a>
+			<a href="##">FAQ</a>
+			<a href="##">Any ideas, DM us</a>
+			<a href="##">Doc</a>
+		</div>
+		<div class="Footer_columns">
+			<h1>Services</h1>
+			<a href="##">Startup services</a>
+			<a href="##">Design services</a>
+			<a href="##">Projects</a>
+			<a href="##">Courses</a>
+		</div>
+	</div>
+</footer>
+<div class="Privacy_holder">
+	<div class="Privacy_links">
+		<a href="##">Privacy policy</a>
+		<a href="##">Cookies Notice</a>
+		<a href="##">Security</a>
+		<a href="##">Terms of use</a>
+	</div>
+	<div class="Social-media">
+		<img src="./assets/twitter.svg"/>
+		<img src="./assets/facebook.svg"/>
+		<img src="./assets/instagram.svg"/>
+	</div>
+</div>
+<div class="Scroll">
+ <a href="#top" class="back-to-top-link" aria-label="Scroll to Top">&#9757</a>
+</div>
+		<!-- script files link here -->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			// Animation------------------------------------
+			AOS.init({
+				duration: 900,
+				offset: 220,
+				easing: 'ease-in-out-quad'
+			});
+          //-----scroll-----------------
+		  const ham = document.querySelector('.Ham');
+		  const Close=document.querySelector(".Close");
+		  const DropMenu =document.querySelector('.dropMenu')
+			window.addEventListener('scroll', () => {
+		const top = window.innerHeight * (10 / 100)+300;
+		if (window.scrollY <= top) {
+			document.querySelector(".Scroll").style.display='none';
+		
+		}
+		if (window.scrollY > top) {
+				document.querySelector(".Scroll").style.display='grid';
+		}
+	});
+		ham.addEventListener('click',() => {
+			DropMenu.classList.add("MenuAnimation")
+
+		})
+		Close.addEventListener('click',() => {
+			DropMenu.classList.remove('MenuAnimation')
+
+		})
+		</script>
+	</div>
+
 
 </div>	<br><br>
 </body>
